@@ -1,3 +1,6 @@
+dump1090-hptoa (1.16) unstable; urgency=medium
+  * Package the OpenSky Network fork.
+
 dump1090-mutability (1.15~dev) UNRELEASED; urgency=medium
 
   * In development.

@@ -7,10 +7,10 @@ server{
         rewrite ^/dump1090$ /dump1090/gmap.html permanent;
 
         location /dump1090/ {
-           alias /usr/share/dump1090-mutability/html/;
+           alias /usr/share/dump1090-hptoa/html/;
         }
         location /dump1090/data/ {
-           alias /run/dump1090-mutability/;
+           alias /run/dump1090-hptoa/;
         }
 }
 

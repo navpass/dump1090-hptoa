@@ -1,11 +1,11 @@
 #!/bin/sh
 ### BEGIN INIT INFO
-# Provides:          dump1090-mutability
+# Provides:          dump1090-hptoa
 # Required-Start:    $remote_fs $network
 # Required-Stop:     $remote_fs $network
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: dump1090 daemon (mutability variant)
+# Short-Description: dump1090 daemon (hptoa variant)
 # Description:       Receives ADS-B messages from a RTLSDR dongle
 #                    and makes them available to other applications via
 #                    a variety of network protocols.
@@ -15,8 +15,8 @@
 
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
-DESC="dump1090-mutability daemon"
-NAME=dump1090-mutability
+DESC="dump1090-hptoa daemon"
+NAME=dump1090-hptoa
 DAEMON=/usr/bin/$NAME
 ARGS=""
 PIDFILE=/var/run/$NAME.pid
