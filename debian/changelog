@@ -4,7 +4,7 @@ dump1090-hptoa (1.16) unstable; urgency=medium
   * Package https://github.com/openskynetwork/dump1090-hptoa
   * bump verssion
 
--- Jeremy Hinegardner <jeremy@dojo4.com>  Fri, Jan 25 2019 22:01:18 +0000
+-- Jeremy Hinegardner <jeremy@dojo4.com>  Fri, 25 Jan 2019 22:01:18 +0000
 
 dump1090-mutability (1.15~dev) UNRELEASED; urgency=medium
 
