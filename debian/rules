@@ -20,11 +20,5 @@ SRCNAME=$(shell dpkg-parsechangelog | sed -n 's/^Source: //p')
 override_dh_auto_build:
 	dh_auto_build -- 'EXTRACFLAGS=-DHTMLPATH=\"/usr/share/dump1090-hptoa/html\" -DMODES_DUMP1090_VARIANT=\"$(SRCNAME)\"'
 
-override_dh_install:
-	dh_install
-	install -d debian/dump1090-hptoa/usr/bin
-	cp -a dump1090 debian/dump1090-hptoa/usr/bin/dump1090-hptoa
-	cp -a view1090 debian/dump1090-hptoa/usr/bin/view1090-hptoa
-
 %:
 	dh $@ 

@@ -10,7 +10,7 @@
 START_DUMP1090=
 
 # User to run dump1090 as.
-DUMP1090_USER=
+DUMP1090_USER=root
 
 # Logfile to log to
 LOGFILE=
