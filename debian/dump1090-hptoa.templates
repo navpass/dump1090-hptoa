@@ -17,8 +17,8 @@ Type: string
 Default: root
 
 Template; dump1090-hptoa/timestamp-method
-Description: High Precision timestamap method:
-  This can be one of 3 options: PeakPulse, CorrPulse, or None
+Description: High Precision timestamp method:
+ This can be one of 3 options: PeakPulse, CorrPulse, or None
 Type: string
 Default: PeakPulse
 
