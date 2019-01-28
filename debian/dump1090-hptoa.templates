@@ -16,7 +16,7 @@ Description: User to run dump1090 as:
 Type: string
 Default: root
 
-Template; dump1090-hptoa/timestamp-method
+Template: dump1090-hptoa/timestamp-method
 Description: High Precision timestamp method:
  This can be one of 3 options: PeakPulse, CorrPulse, or None
 Type: string
