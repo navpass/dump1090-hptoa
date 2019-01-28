@@ -14,7 +14,7 @@ Description: User to run dump1090 as:
  When started automatically, dump1090 runs as an unprivileged system user. 
  This user will be created if it does not yet exist.
 Type: string
-Default: dump1090
+Default: root
 
 Template: dump1090-hptoa/log-file
 Description: Path to log to:
