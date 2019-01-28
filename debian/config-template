@@ -15,6 +15,9 @@ DUMP1090_USER=
 # Logfile to log to
 LOGFILE=
 
+# High precision timestamp method. One of PeakPulse, CorrPulse, or None
+TIMESTAMP_METHOD=
+
 #
 # Receiver options
 #
