@@ -2,7 +2,10 @@ dump1090-hptoa (1.16) unstable; urgency=medium
 
   * Rename to dump1090-hptoa
   * Package https://github.com/openskynetwork/dump1090-hptoa
-  * bump verssion
+  * bump version
+  * Support the --enable-hptoa commandline option in config and init script
+  * Change defaualt user to be root as per hptoa requirements
+  * Update debconf items for config changes
 
  -- Jeremy Hinegardner <jeremy@dojo4.com>  Fri, 25 Jan 2019 22:01:18 +0000
 
