@@ -1,13 +1,13 @@
-Source: dump1090-mutability
+Source: dump1090-hptoa
 Section: embedded
 Priority: extra
 Maintainer: Oliver Jowett <oliver@mutability.co.uk>
 Build-Depends: debhelper(>=8), librtlsdr-dev, libusb-1.0-0-dev, pkg-config
 Standards-Version: 3.9.3
-Homepage: https://github.com/mutability/dump1090
-Vcs-Git: https://github.com/mutability/dump1090.git
+Homepage: https://github.com/openskynetwork/dump1090-hptoa
+Vcs-Git: https://github.com/openskynetwork/dump1090-hptoa.git
 
-Package: dump1090-mutability
+Package: dump1090-hptoa
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, adduser
 Recommends: python(>=2.5), lighttpd
@@ -16,5 +16,7 @@ Description: ADS-B Ground Station System for RTL-SDR
  Networked Aviation Mode S / ADS-B decoder/translator with RTL-SDR software
  defined radio USB device support.
  .
- This is a packaging of the "mutability" fork of dump1090 that includes
- sampling at 2.4MHz and other improvements.
+ This is a fork of Mutability's version of dump1090 that adds a novel method to
+ compute high-precision Time-of-Arrival (ToA) timestamps of the Mode S / ADS-B
+ packets. The actual precision is in the order of a few nanoseconds, depending
+ on the packet strength.

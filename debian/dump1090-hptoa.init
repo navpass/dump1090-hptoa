@@ -1,11 +1,11 @@
 #!/bin/sh
 ### BEGIN INIT INFO
-# Provides:          dump1090-mutability
+# Provides:          dump1090-hptoa
 # Required-Start:    $remote_fs $network
 # Required-Stop:     $remote_fs $network
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: dump1090 daemon (mutability variant)
+# Short-Description: dump1090 daemon (hptoa variant)
 # Description:       Receives ADS-B messages from a RTLSDR dongle
 #                    and makes them available to other applications via
 #                    a variety of network protocols.
@@ -15,8 +15,8 @@
 
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
-DESC="dump1090-mutability daemon"
-NAME=dump1090-mutability
+DESC="dump1090-hptoa daemon"
+NAME=dump1090-hptoa
 DAEMON=/usr/bin/$NAME
 ARGS=""
 PIDFILE=/var/run/$NAME.pid
@@ -41,6 +41,7 @@ SCRIPTNAME=/etc/init.d/$NAME
 [ -z "$NET_BUFFER" ] && NET_BUFFER=0
 [ -z "$JSON_INTERVAL" ] && JSON_INTERVAL=0
 [ -z "$MAX_RANGE" ] && MAX_RANGE=300
+[ -z "$TIMESTAMP_METHOD" ] && TIMESTAMP_METHOD="PeakPulse"
 
 # receiver:
 NICELEVEL="--nicelevel -5"
@@ -67,7 +68,7 @@ ARGS="$ARGS --max-range $MAX_RANGE"
 ARGS="$ARGS \
 --net-ri-port $RAW_INPUT_PORT --net-ro-port $RAW_OUTPUT_PORT \
 --net-bi-port $BEAST_INPUT_PORT --net-bo-port $BEAST_OUTPUT_PORT \
---net-sbs-port $SBS_OUTPUT_PORT"
+--net-sbs-port $SBS_OUTPUT_PORT --enable-hptoa $TIMESTAMP_METHOD"
 if [ -n "$NET_HEARTBEAT" ]; then ARGS="$ARGS --net-heartbeat $NET_HEARTBEAT"; fi
 if [ -n "$NET_OUTPUT_SIZE" ]; then ARGS="$ARGS --net-ro-size $NET_OUTPUT_SIZE"; fi
 if [ -n "$NET_OUTPUT_INTERVAL" ]; then ARGS="$ARGS --net-ro-interval $NET_OUTPUT_INTERVAL"; fi

@@ -1,6 +1,6 @@
 
 CMAKE_MINIMUM_REQUIRED( VERSION 2.8.4 )
-PROJECT(dump1090)
+PROJECT(dump1090-hptoa)
 # allow more human readable "if then else" constructs
 #SET( CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS TRUE )
 
@@ -64,9 +64,9 @@ SET ( DUMP1090_SOURCE_FILES
         demod_2400.c
         dump1090.c)
 
-add_executable (dump1090 ${DUMP1090_SOURCE_FILES})
+add_executable (dump1090-hptoa ${DUMP1090_SOURCE_FILES})
 
-TARGET_LINK_LIBRARIES(dump1090
+TARGET_LINK_LIBRARIES(dump1090-hptoa
         ${LIBRTLSDR_LIBRARIES}
         hp-toa
         pthread
@@ -91,9 +91,9 @@ SET ( VIEW1090_SOURCE_FILES
         track.c
         util.c  )
 
-add_executable (view1090 ${VIEW1090_SOURCE_FILES})
+add_executable (view1090-hptoa ${VIEW1090_SOURCE_FILES})
 
-TARGET_LINK_LIBRARIES(view1090
+TARGET_LINK_LIBRARIES(view1090-hptoa
         ${LIBRTLSDR_LIBRARIES}
         pthread
         rt
@@ -117,9 +117,9 @@ SET ( FAUP1090_SOURCE_FILES
         util.c
         )
 
-add_executable (faup1090 ${FAUP1090_SOURCE_FILES})
+add_executable (faup1090-hptoa ${FAUP1090_SOURCE_FILES})
 
-TARGET_LINK_LIBRARIES(faup1090
+TARGET_LINK_LIBRARIES(faup1090-hptoa
         ${LIBRTLSDR_LIBRARIES}
         pthread
         rt
@@ -129,4 +129,6 @@ TARGET_LINK_LIBRARIES(faup1090
         )
 
 
-
+install(TARGETS dump1090-hptoa view1090-hptoa faup1090-hptoa
+        RUNTIME DESTINATION bin
+       )

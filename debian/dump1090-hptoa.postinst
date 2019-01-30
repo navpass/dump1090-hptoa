@@ -17,7 +17,7 @@ set -e
 # for details, see http://www.debian.org/doc/debian-policy/ or
 # the debian-policy package
 
-NAME=dump1090-mutability
+NAME=dump1090-hptoa
 CONFIGFILE=/etc/default/$NAME
 SRCCONFIGFILE=$CONFIGFILE
 TEMPLATECONFIG=/usr/share/$NAME/config-template
@@ -70,6 +70,7 @@ case "$1" in
         subvar_yn auto-start START_DUMP1090
         subvar run-as-user DUMP1090_USER
         subvar log-file LOGFILE
+        subvar timestamp-method TIMESTAMP_METHOD
         subvar rtlsdr-device DEVICE
         subvar rtlsdr-gain GAIN
         subvar rtlsdr-ppm PPM

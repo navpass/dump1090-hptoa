@@ -1,4 +1,4 @@
-/var/log/dump1090-mutability.log {
+/var/log/dump1090-hptoa.log {
   weekly
   rotate 4
   copytruncate

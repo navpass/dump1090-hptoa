@@ -31,6 +31,8 @@ else ( ${ARCHITECTURE} MATCHES "armhf" )
 endif( ${ARCHITECTURE} MATCHES "armhf" )
 
 
-
+install(TARGETS hp-toa
+        LIBRARY DESTINATION lib
+        )
 
 SET_PROPERTY(TARGET hp-toa PROPERTY SOVERSION 0.1)

@@ -1,10 +1,10 @@
-## TEMPLATE FILE - This is used to create /etc/default/dump1090-mutability ##
+## TEMPLATE FILE - This is used to create /etc/default/dump1090-hptoa      ##
 ## The first three lines will be discarded                                 ##
 
-# dump1090-mutability configuration file
+# dump1090-hptoa configuration file
 # This is a POSIX shell fragment.
 # You can edit this file directly, or use
-# "dpkg-reconfigure dump1090-mutability"
+# "dpkg-reconfigure dump1090-hptoa"
 
 # Set to "yes" to start dump1090 on boot.
 START_DUMP1090=
@@ -14,6 +14,9 @@ DUMP1090_USER=
 
 # Logfile to log to
 LOGFILE=
+
+# High precision timestamp method. One of PeakPulse, CorrPulse, or None
+TIMESTAMP_METHOD=
 
 #
 # Receiver options
